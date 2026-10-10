@@ -177,4 +177,4 @@ Real problems hit while building this, and how each was fixed.
 
 ## Author
 
-**Your name** - [GitHub](https://github.com/your-username) | [LinkedIn](https://www.linkedin.com/in/your-profile)
+**MAHIN AHMED** -
