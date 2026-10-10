@@ -2,7 +2,7 @@
 
 A three-site enterprise network built in Cisco Packet Tracer: a main campus with eight VLANs across three buildings, a smaller campus with two VLANs, and a cloud site hosting a server. Inter-VLAN routing uses router-on-a-stick, and the sites are joined by serial WAN links with static routing.
 
-![Network topology](Screenshot 2026-10-10 at 20.23.31.png)
+![Network topology](Snetwork-topology.png)
 
 > Add a screenshot of your topology to `docs/topology.png`.
 
