@@ -56,21 +56,5 @@ Four real faults hit while building this network, written up with the symptom, i
 
 ---
 
-## What I learned
 
-- A trunk only carries VLANs that exist in the switch's VLAN database.
-- Both ends of a link must agree on trunk or access mode.
-- Routers only know directly connected networks until given routes, and replies need a return path as much as requests need a forward one.
-- "Destination host unreachable" from a router's own IP means it has no route to the destination.
-- Summary routes keep routing tables small.
-- `show ip interface brief`, `show vlan brief`, `show interfaces trunk` and `show ip route` solve most problems when used in order, one layer at a time.
 
-## Files
-
-- `companyNetwork.pkt` — Packet Tracer project (open with Cisco Packet Tracer)
-- `docs/topology.png` — Screenshot of the topology
-- `configs/` — Optional: exported running-configs for each device
-
----
-
-*Created from the project troubleshooting notes.*
