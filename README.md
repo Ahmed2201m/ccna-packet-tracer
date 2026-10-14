@@ -146,26 +146,7 @@ ip route 192.168.0.0 255.255.240.0 10.10.10.5
 
 The first ping across a router often times out while ARP resolves. That is normal.
 
-## Troubleshooting log
-
-Real problems hit while building this, and how each was fixed.
-
-| Symptom | Cause | Fix |
-|---|---|---|
-| Main campus PCs could not ping the gateway or get DHCP | The core 3560 had no VLANs 10-80 in its VLAN database | Created the VLANs on the 3560 |
-| Only ADMIN worked after that | The 3560's building-facing ports were access ports in VLAN 1, while the building switches' uplinks were trunks | Set the 3560 ports to trunk, then trunked and assigned VLANs on each building switch |
-| `show interfaces trunk` showed no VLANs forwarding on a link | Trunk mismatch between the two ends | Matched both ends of every link |
-| Ping from the small campus returned "Destination host unreachable" | The small campus router had no route back to the main campus subnets | Added the `192.168.0.0/20` static route |
-| CDP showed every neighbour as "Switch" | All switches had the default hostname | Hostnames can be set to identify neighbours |
-
-## What I learned
-
-- A trunk only carries VLANs that exist in the switch's VLAN database.
-- Both ends of a link must agree on trunk or access mode.
-- Routers only know directly connected networks until given routes, and replies need a return path as much as requests need a forward one.
-- "Destination host unreachable" from a router's own IP means it has no route to the destination.
-- Summary routes keep routing tables small.
-- `show ip interface brief`, `show vlan brief`, `show interfaces trunk` and `show ip route` solve most problems when used in order, one layer at a time.
+| All switches had the default hostname | Hostnames can be set to identify neighbours |
 
 ## Files
 
@@ -174,6 +155,8 @@ Real problems hit while building this, and how each was fixed.
 | `companyNetwork.pkt` | Packet Tracer project (open with Cisco Packet Tracer) |
 | `docs/topology.png` | Screenshot of the topology |
 | `configs/` | Optional: exported running-configs for each device |
+| `troubleshooting.md` | troubleshooting log |
+
 
 ## Author
 
